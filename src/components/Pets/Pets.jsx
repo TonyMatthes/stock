@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import PetItem from './PetItem'
 
 function Pets() {
     const dispatch = useDispatch();
@@ -20,7 +21,7 @@ function Pets() {
             <h2>Check out all my awesome saucesome pets</h2>
             <ul>
                 {pets.map(pet => (
-                    <li key={pet.id}>{pet.name}</li>
+                    <PetItem key={pet.id} pet = {pet}/>
                 ))}
             </ul>
         </>
